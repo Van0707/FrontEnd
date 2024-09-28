@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            border-style: solid black;
+            justify-content: center;
+            align-items: center;
+            height: 30vh;
+            background-color: #f4f4f4;
+            border-color: #000
+        }
+
+        .personal-info {
+            border: 2px solid #000;
+            padding: 20px;
+            background-color: #fff;
+            width: 300px;
+            text-align: left;
+        }
+
+    </style>
+</head>
+<body>
+<p id="demo"></p>
+    <script type="module">
+        import message from "./message.js"
+        
+        document.getElementById("demo").innerHTML = message()
+    </script>
+</body>
+</html>

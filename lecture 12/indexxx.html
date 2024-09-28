@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My login form style</title>
+  <!-- Include React and ReactDOM via CDN -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    body {
+    background-image: url('langit-biru-langit-cerah-1114244.jpg');
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    // Step 2: mengartikan komponen log in
+    function LoginForm() {
+      return (
+        <div style={{ width: '400px', textAlign: 'center' }}>
+          <h1 style={{ color: '#FFFFFF' }}>My Login Form</h1>
+          
+          <div style={{ background: '#6E9FC1', padding: '15px', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.2)' }}>
+            <div style={{ marginBottom: '10px' }}>
+              <input 
+                type="text" 
+                placeholder="Email address or Phone number" 
+                style={{ width: '90%', padding: '12px', borderRadius: '5px', border: '1px solid #ddd', marginBottom: '7px' }} 
+              />
+            </div>
+            <div style={{ marginBottom: '16px' }}>
+              <input 
+                type="password" 
+                placeholder="Password" 
+                style={{ width: '90%', padding: '12px', borderRadius: '5px', border: '1px solid #ddd', marginBottom: '10px' }} 
+              />
+            </div>
+            <button 
+              style={{ width: '100%', padding: '12px', background: '#6376C1', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer', fontWeight: 'bold' }}>
+              Log In
+            </button>
+            <div style={{ marginTop: '9px' }}>
+              <a href="#" style={{ color: 'BLACK', textDecoration: 'none' }}>Forget your password?</a>
+            </div>
+            <hr style={{ margin: '15px 1' }} />
+            <button 
+              style={{ padding: '12px', background: '#ACACAC', color: 'white', border: 'none', borderRadius: '5px', cursor: 'pointer', fontWeight: 'bold' }}>
+              Create new account
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    // Step 3: merender LoginForm component
+    ReactDOM.render(<LoginForm />, document.getElementById('root'));
+  </script>
+</body>
+</html>
